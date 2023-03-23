@@ -10,7 +10,7 @@ CORS(app)
 app.config['DEBUG'] = True
 app.config.setdefault('JWT_ACCESS_TOKEN_EXPIRES', datetime.timedelta(hours=1))
 app.config.setdefault('JWT_REFRESH_TOKEN_EXPIRES', datetime.timedelta(days=30))
-app.config.setdefault('JWT_HEADER_NAME', 'JWT_Authorization')
+app.config.setdefault('JWT_HEADER_NAME', 'auth-token')
 app.secret_key = config.secret
 
 jwt = JWTManager(app)
